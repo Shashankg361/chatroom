@@ -21,7 +21,7 @@
     </div>
 
     <!--message List-->
-    <div class="chat-window">
+    <div class="chat-window container">
         <ul class="chat-list list-group"></ul>
     </div>
 
@@ -58,8 +58,10 @@
         </form>
     </div>
 
+    
+    <script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
     <script>
     const firebaseConfig = {
         apiKey: "AIzaSyA7sDbMFF7Fbevf8Cya91BDT4qZCRNL8z0",
@@ -74,8 +76,9 @@
     firebase.initializeApp(firebaseConfig);
     const db = firebase.firestore();
     </script>
-    <script src="Script/app.js"></script>
+    
     <script src="Script/Chat.js"></script>
     <script src="Script/UI.js"></script>
+    <script src="Script/app.js"></script>
 </body>
 </html>

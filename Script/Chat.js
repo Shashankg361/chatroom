@@ -1,4 +1,4 @@
-class Chatroom{
+class ChatRoom{
     constructor(Username,room){
         this.Username = Username;
         this.room = room;
@@ -49,18 +49,5 @@ class Chatroom{
 
 }
 
-const chatroom = new Chatroom('yoshi','general');
-chatroom.getChat(data=>{
-    console.log(data);
-});
 
-setTimeout(()=>{
-    chatroom.updateRoom('gaming');
-    chatroom.updateName('shaun');
-    chatroom.getChat(data=>{
-        console.log(data);
-    });
-    chatroom.addChat('old member');
-
-},3000);
 
