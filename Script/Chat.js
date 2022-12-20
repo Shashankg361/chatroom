@@ -37,10 +37,12 @@ class ChatRoom{
 
     updateName(name){
         this.Username = name;
+        localStorage.setItem('Username',name);
     }
 
     updateRoom(room){
         this.room = room;
+        localStorage.setItem('Room',room);
         console.log('room Updated');
         if(this.unsub){
             this.unsub();
