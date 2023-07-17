@@ -11,7 +11,7 @@ const Room = localStorage.Room ? localStorage.Room : 'general';
 
 chatRoom.addEventListener('click',e=>{
     if(e.target.tagName === 'BUTTON' ){
-        const roomName = e.target.id;
+        const roomName = e.target.id; 
         chatroom.updateRoom(roomName);
         chatUI.clear();
         chatroom.getChat(data => chatUI.render(data));
