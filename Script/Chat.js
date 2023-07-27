@@ -31,7 +31,7 @@ class ChatRoom{
                     callback(change.doc.data());
                 }
 
-            })
+            }) 
         })
     }
 

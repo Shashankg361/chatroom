@@ -9,6 +9,10 @@ const chatRoom = document.querySelector('.chat-room');
 const UserName = localStorage.UserName ? localStorage.Username : 'anonmous';
 const Room = localStorage.Room ? localStorage.Room : 'general';
 
+//class instences
+const chatUI = new ChatUI(chatList);
+const chatroom = new ChatRoom(UserName,'gaming');
+
 chatRoom.addEventListener('click',e=>{
     if(e.target.tagName === 'BUTTON' ){
         const roomName = e.target.id; 
@@ -18,9 +22,7 @@ chatRoom.addEventListener('click',e=>{
     }
 });
 
-//class instences
-const chatUI = new ChatUI(chatList);
-const chatroom = new ChatRoom(UserName,'gaming');
+
 
 // adding Eventlisterner
 newChatForm.addEventListener('submit',e=>{
