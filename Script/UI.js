@@ -1,5 +1,6 @@
 // to render the dom
 // change and remove the message
+//import{format ,distanceInWordsToNow} from "date-fns";
 
 class ChatUI{
     constructor(list){
@@ -11,7 +12,7 @@ class ChatUI{
     }
 
     render(data){
-        const when = dateFns.distanceInWordsToNow(
+        try{const when = dateFns.distanceInWordsToNow(
             data.created_at.toDate(),
             { addSuffix: true}
         );
@@ -24,6 +25,9 @@ class ChatUI{
         `
 
         this.list.innerHTML += html;
+        } catch(error){
+            console.log("Error rendering chat message : " ,error);
+        }
     }
 }
 
